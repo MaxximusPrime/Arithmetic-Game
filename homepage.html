@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="homepage.js"></script>
+    <title>Home</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo"><h1>Max Avelar</h1></div>
+        <ul class="links">
+            <li><a href="http://localhost:52330/ed2go.project/homepage.html"> Home</a></li>
+            <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+            <li><a href="#">Games
+                <i class="fa-solid fa-caret-down"></i>
+                <ul>
+                    <li><a href="#">Anagram Hunt</a></li>
+                    <li><a href="http://localhost:52330/ed2go.project/MathGame.html">Math Facts Practice</a></li>
+                </ul>
+            </a></li>
+        </ul>
+                
+
+
+        <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu">
+            <li><a href="http://localhost:52330/ed2go.project/homepage.html"> Home </a></li>
+            <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a></li>
+    </div>
+</header>
+
+<main>
+    <section id="writing">
+        <h1>Welcome </h1>
+    
+    <footer class="quotes">
+        <h2>Famous Quotes... </h2><br>
+    <div class="quote-loop">
+        <p>
+            &ldquo; Mathematics is, in its own way, the poetry of logical ideas.&rdquo;</p>
+            <cite>- Albert Einstein</cite>
+    </div>
+    <div class="quote-loop quote-hide">
+        <p>
+            &ldquo; Mathematics is the science which use easy words for hard ideas.&rdquo;</p>
+            <cite>- Edward Kasner</cite>
+        </p>
+    </div>
+    <div class="quote-loop quote-hide">
+        <p>&ldquo; Mathematicians do not study objects, but the relations between objects.&rdquo;</p>
+        <cite>- Henri Poincaré</cite>
+    </div>
+    </footer>
+    <div class="game-choose">
+        <p class="math-game"><strong>Math Facts Practice</strong><br>This is a math facts practice game where you can test your math skills.
+            Come and see<br> what you are made of and score as many points as you can in 30 seconds!
+        <br>It has addition, subtraction, division, and multiplication<br> problems but you get get to choose
+    what problems you tackle first.</p>
+    <div class="game-button">
+        <button class="game_button"onclick="window.location.href='http://localhost:52330/ed2go.project/MathGame.html';"> Play</button>
+    </div>
+        <p class="anagram-game"><strong>Anagram Hunt</strong><br>
+        Anagram Hunt is a game where you try to find as many anagrams<br>
+    in a word. It is a lot harder than it seems.The bigger the word the<br>
+    more anagrams it shall have.That is the challenge in this game are<br>
+    you up for it?
+    </div>
+
+    <div class="icons">
+        <div class="facebook">
+            
+            <a href="https://www.facebook.com/pelusin.avelar/">
+            <i class="fab fa-facebook"></i></a>
+        </div>
+       <div class="twitter">
+        <a href="https://twitter.com/Maxdota56">
+        <i class="fab fa-twitter"></i></a>
+       </div>
+        <div class="instagram" id="instagram">
+                <a href="https://www.instagram.com/maxavelar_/">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="mail">
+            <a href="http://localhost:52330/ed2go.project/ContactUs.html">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    
+    </div>
+    </section>
+    
+</main>
+
+
+
+
+
+        <script>
+
+
+const toggleBtn =document.querySelector('.toggle_btn')
+const toggleBtnIcon =document.querySelector('.toggle_btn i')
+const dropDownMenu =document.querySelector('.dropdown_menu')
+const onclick=document.querySelector('.action_btn')
+
+
+toggleBtn.onclick= function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    action_btn.classList.toggle('open')
+    
+    
+    
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'}
+    </script>
+
+
+    </body>
+</html>
+
+
+
+

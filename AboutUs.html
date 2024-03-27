@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AboutUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="AboutUs.js"></script>
+    <title>About Us</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><h1>MathGames</h1></div>
+            <ul class="links">
+                <li><a href="http://localhost:52330/ed2go.project/homepage.html#"> Home</a></li>
+                <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+                <li><a href="#">Games
+                    <i class="fa-solid fa-caret-down"></i>
+                    <ul>
+                        <li><a href="#">Anagram Hunt</a></li>
+                        <li><a href="http://localhost:52330/ed2go.project/MathGame.html">Math Facts Practice</a></li>
+                    </ul>
+                </a></li>
+            </ul>
+                    
+    
+    
+            <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    
+        <div class="dropdown_menu">
+                <li><a href="http://localhost:52330/ed2go.project/homepage.html"> Home </a></li>
+                <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+                <li><a href="#">Games</a></li>
+                <li> <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a></li>
+        </div>
+    </header>
+
+    <main>
+            <section id="writing">
+            <h1>About Me</h1>
+        </div>
+        <div class="inner-container">
+            <div class="writing">
+            <p>Hello! Welcome to my webpage. My name
+                is Max Avelar and I am 20 years old. I am currently studying
+                Web Development and I am loving it. This here is one of the many pages that
+                I will be creating. I was tasked to make one of two games that were given to me and
+                I have decided to go with Math Facts Practice. If you are interested in following me I have linked my following social media accounts.
+                Thank you for your time and if you have any comments please feel free to submit them below.
+            </p>
+            </div>
+        </div>
+
+                <div class="input_field">
+            <textarea name="comments"  class="comments" id ="comments" cols="50" rows="6" placeholder="Enter comment here" minlength="10" maxlength="200"></textarea>
+                </div>
+                <div class="input-field">
+                    <button class="submit" onclick="alertFunction()">Submit</button>
+                </div>
+                
+  </body>
+    </footer>
+
+
+        <div class="icons">
+        <div class="facebook">
+            
+            <a href="https://www.facebook.com/pelusin.avelar/">
+            <i class="fab fa-facebook"></i></a>
+        </div>
+       <div class="twitter">
+        <a href="https://twitter.com/Maxdota56">
+        <i class="fab fa-twitter"></i></a>
+       </div>
+        <div class="instagram" id="instagram">
+                <a href="https://www.instagram.com/maxavelar_/">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="mail">
+            <a href="http://localhost:52330/ed2go.project/ContactUs.html">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    
+    </div>
+</section>
+
+
+
+
+
+</main>
+<script>
+const toggleBtn =document.querySelector('.toggle_btn')
+const toggleBtnIcon =document.querySelector('.toggle_btn i')
+const dropDownMenu =document.querySelector('.dropdown_menu')
+const onclick=document.querySelector('.action_btn')
+
+
+toggleBtn.onclick= function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    action_btn.classList.toggle('open')
+    
+    
+    
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'}
+    </script>
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="register.js"></script>
+    <title>Registration</title>
+</head>
+      <body>
+          <div class="navbar">
+              <div class="logo"><h1>MathGames</h1></div>
+              <ul class="links">
+                  <li><a href="http://localhost:52330/ed2go.project/homepage.html#"> Home</a></li>
+                  <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+                  <li><a href="#">Games
+                      <i class="fa-solid fa-caret-down"></i>
+                      <ul>
+                          <li><a href="#">Anagram Hunt</a></li>
+                          <li><a href="http://localhost:52330/ed2go.project/MathGame.html">Math Facts Practice</a></li>
+                      </ul>
+                  </a></li>
+              </ul>
+                      
+      
+      
+              <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a>
+              <div class="toggle_btn">
+                  <i class="fa-solid fa-bars"></i>
+              </div>
+          </div>
+      
+          <div class="dropdown_menu">
+                  <li><a href="http://localhost:52330/ed2go.project/homepage.html"> Home </a></li>
+                  <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+                  <li><a href="#">Games</a></li>
+                  <li> <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a></li>
+          </div>
+      
+
+  <form id="loginform" method="post">
+          <div class="boxes">
+              <div class="container">
+                <div class="top-header">
+                    <header>Register</header>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" class="input" placeholder="Email" 
+                    required minlength="8" maxlength="30">
+                  <div class="envelope"><i class="fa-solid fa-envelope"></i></div>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" class="input" placeholder="Password" 
+                    required minlength="8" maxlength="30">
+                    <div class="lock"><i class="fa-solid fa-lock"></i></div>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" class="input" placeholder="Repeat Password"
+                    required minlength="8" maxlength="30">
+                    <div class="lock_2"><i class="fa-solid fa-lock"></i></div>
+                  </div>
+                  <div class=" input-field">
+                    <input type="submit" class="submit" Value="Register">
+                  </div>
+  
+                  <div class="bottom">
+                    <div class="left">
+                      <input type="checkbox" id="check" required>
+                      <label for="check">I am over 13 and like video games.</label>
+                    </div>
+                    <div class="right">
+                      <label><a href="http://localhost:52330/ed2go.project/login.html"> Log in!</a></label>
+                    </div>
+                  </div>
+              </div>
+        </form>
+
+          <script>
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon =document.querySelector('.toggle_btn i')
+const dropDownMenu =document.querySelector('.dropdown_menu')
+const onclick=document.querySelector('.action_btn')
+
+
+toggleBtn.onclick= function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    action_btn.classList.toggle('open')
+    
+    
+    
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'}
+
+          </script>
+
+
+
+    </body>
+</html>

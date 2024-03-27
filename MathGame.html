@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="stylesheet" type="text/css" href="MathGame.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><h1>MathGames</h1></div>
+            <ul class="links">
+                <li><a href="http://localhost:52330/ed2go.project/homepage.html#l"> Home</a></li>
+                <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+                <li><a href="#">Games
+                    <i class="fa-solid fa-caret-down"></i>
+                    <ul>
+                        <li><a href="#">Anagram Hunt</a></li>
+                        <li><a href="http://localhost:52330/ed2go.project/MathGame.html">Math Facts Practice</a></li>
+                    </ul>
+                </a></li>
+            </ul>
+                    
+    
+    
+            <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    
+        <div class="dropdown_menu">
+                <li><a href="http://localhost:52330/homepage.html"> Home </a></li>
+                <li><a href="http://localhost:52330/ed2go.project/AboutUs.html">About</a></li>
+                <li><a href="#">Games</a></li>
+                <li> <a href="http://localhost:52330/ed2go.project/login.html" class="action_btn"> Login</a></li>
+        </div>
+    </header>
+    
+    <main class="home_page" id="home_page">
+        <section id="writing">
+        <h1>Math Facts Practice</h1>
+        <div id="my-form" method="post" novalidate>
+        <label for="operation">Select Operation:</label>
+        <select id="operation" name="operation">
+            <option value="choose">--Please Choose--</option>
+            <option value="addition">Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="division">Division</option>
+            <option value="multiplication">Multiplication</option>
+        </select>
+        <button class="second-button" id="second-button" onclick="startGame()">GO</button>
+    </div>
+    <p>1.Select Operation.</p>
+    <p>2.Press<strong> Go</strong></p>
+    <p>3.How many problems can you solve in 30 seconds?</p>
+        </section>
+</main>
+    <div id="game-page">
+        <h1>Math Facts Practice</h1>
+     <div class="calculator">
+        <div id="problem"></div>
+        <div id="answer-text">
+        <input type="text" id="answer" class="result" autofocus></div>
+        <div class="buttons">
+            <button class="numbers">1</button>
+            <button class="numbers">2</button>
+            <button class="numbers">3</button>
+            <button class="numbers">4</button>
+            <button class="numbers">5</button>
+            <button class="numbers">6</button>
+            <button class="numbers">7</button>
+            <button class="numbers">8</button>
+            <button class="numbers">9</button>
+            <button class="numbers">0</button>
+            <button class="clear">Clear</button>
+            <button class="key" onclick="clickKey('Enter')">Enter</button>
+        </div>
+     </div>
+    
+        <h2 id="message"></h2>
+        <div id="play_again">
+            <button id="play-again" onclick="resetGame()">Play Again</button></div>
+ <div id="start_game">
+<button id="start-game" onclick="startTimer()">Start Game</button></div>
+                <div id="score-container"><h3>Score: <span id="score">0</span></h3></div>
+ <h3 id="timer">Time:<span id="timer-value">30</span></h3>
+    <script src="MathGame.js"></script>
+</div>
+<div class="icons">
+    <div class="facebook">
+        
+        <a href="https://www.facebook.com/pelusin.avelar/">
+        <i class="fab fa-facebook"></i></a>
+    </div>
+   <div class="twitter">
+    <a href="https://twitter.com/Maxdota56">
+    <i class="fab fa-twitter"></i></a>
+   </div>
+    <div class="instagram" id="instagram">
+            <a href="https://www.instagram.com/maxavelar_/">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <div class="mail">
+        <a href="http://localhost:52330/ed2go.project/ContactUs.html">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+
+</div>
+
+
+<script>
+
+
+    const toggleBtn =document.querySelector('.toggle_btn')
+    const toggleBtnIcon =document.querySelector('.toggle_btn i')
+    const dropDownMenu =document.querySelector('.dropdown_menu')
+    const onclick=document.querySelector('.action_btn')
+    
+    
+    toggleBtn.onclick= function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+        action_btn.classList.toggle('open')
+        
+        
+        
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'}
+        </script>
+</body>
+</html>
